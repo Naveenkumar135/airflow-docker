@@ -1993,3 +1993,17 @@
 [2025-03-19T07:22:55.129+0000] {logging_mixin.py:154} INFO - [2025-03-19T07:22:55.129+0000] {dag.py:2941} INFO - Sync 1 DAGs
 [2025-03-19T07:22:55.144+0000] {logging_mixin.py:154} INFO - [2025-03-19T07:22:55.143+0000] {dag.py:3722} INFO - Setting next_dagrun for dag_with_postgres_operator_v03 to 2025-03-19T00:00:00+00:00, run_after=2025-03-20T00:00:00+00:00
 [2025-03-19T07:22:55.155+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/postgres_operator.py took 0.062 seconds
+[2025-03-19T07:23:25.561+0000] {processor.py:157} INFO - Started process (PID=191641) to work on /opt/airflow/dags/postgres_operator.py
+[2025-03-19T07:23:25.571+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/postgres_operator.py for tasks to queue
+[2025-03-19T07:23:25.573+0000] {logging_mixin.py:154} INFO - [2025-03-19T07:23:25.572+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/postgres_operator.py
+[2025-03-19T07:23:25.585+0000] {processor.py:839} INFO - DAG(s) dict_keys(['dag_with_postgres_operator_v03']) retrieved from /opt/airflow/dags/postgres_operator.py
+[2025-03-19T07:23:25.604+0000] {logging_mixin.py:154} INFO - [2025-03-19T07:23:25.603+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-03-19T07:23:25.619+0000] {logging_mixin.py:154} INFO - [2025-03-19T07:23:25.619+0000] {dag.py:3722} INFO - Setting next_dagrun for dag_with_postgres_operator_v03 to 2025-03-19T00:00:00+00:00, run_after=2025-03-20T00:00:00+00:00
+[2025-03-19T07:23:25.633+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/postgres_operator.py took 0.077 seconds
+[2025-03-19T07:23:56.129+0000] {processor.py:157} INFO - Started process (PID=191688) to work on /opt/airflow/dags/postgres_operator.py
+[2025-03-19T07:23:56.139+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/postgres_operator.py for tasks to queue
+[2025-03-19T07:23:56.140+0000] {logging_mixin.py:154} INFO - [2025-03-19T07:23:56.139+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/postgres_operator.py
+[2025-03-19T07:23:56.151+0000] {processor.py:839} INFO - DAG(s) dict_keys(['dag_with_postgres_operator_v03']) retrieved from /opt/airflow/dags/postgres_operator.py
+[2025-03-19T07:23:56.175+0000] {logging_mixin.py:154} INFO - [2025-03-19T07:23:56.175+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-03-19T07:23:56.191+0000] {logging_mixin.py:154} INFO - [2025-03-19T07:23:56.191+0000] {dag.py:3722} INFO - Setting next_dagrun for dag_with_postgres_operator_v03 to 2025-03-19T00:00:00+00:00, run_after=2025-03-20T00:00:00+00:00
+[2025-03-19T07:23:56.203+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/postgres_operator.py took 0.078 seconds
