@@ -1,0 +1,67 @@
+[2025-02-26T14:22:38.280+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-26T14:22:38.299+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: our_first_dag_v1.thrid_task scheduled__2025-02-25T00:00:00+00:00 [queued]>
+[2025-02-26T14:22:38.306+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: our_first_dag_v1.thrid_task scheduled__2025-02-25T00:00:00+00:00 [queued]>
+[2025-02-26T14:22:38.306+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 6
+[2025-02-26T14:22:38.318+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): thrid_task> on 2025-02-25 00:00:00+00:00
+[2025-02-26T14:22:38.326+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=7063) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-02-26T14:22:38.326+0000] {standard_task_runner.py:72} INFO - Started process 7065 to run task
+[2025-02-26T14:22:38.327+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'our_first_dag_v1', 'thrid_task', 'scheduled__2025-02-25T00:00:00+00:00', '--job-id', '582', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpwy77i57u']
+[2025-02-26T14:22:38.328+0000] {standard_task_runner.py:105} INFO - Job 582: Subtask thrid_task
+[2025-02-26T14:22:38.370+0000] {task_command.py:467} INFO - Running <TaskInstance: our_first_dag_v1.thrid_task scheduled__2025-02-25T00:00:00+00:00 [running]> on host 25887b48f6fb
+[2025-02-26T14:22:38.444+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='our_first_dag_v1' AIRFLOW_CTX_TASK_ID='thrid_task' AIRFLOW_CTX_EXECUTION_DATE='2025-02-25T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-25T00:00:00+00:00'
+[2025-02-26T14:22:38.445+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-26T14:22:38.446+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-26T14:22:38.446+0000] {logging_mixin.py:190} INFO - Current task name:thrid_task state:running start_date:2025-02-26 14:22:38.299402+00:00
+[2025-02-26T14:22:38.446+0000] {logging_mixin.py:190} INFO - Dag name:our_first_dag_v1 and current dag run status:running
+[2025-02-26T14:22:38.446+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-02-26T14:22:38.447+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-26T14:22:38.447+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'echo hey, I am task3 and will be running after task1 at the same time as task2!']
+[2025-02-26T14:22:38.459+0000] {subprocess.py:99} INFO - Output:
+[2025-02-26T14:22:38.460+0000] {subprocess.py:106} INFO - hey, I am task3 and will be running after task1 at the same time as task2!
+[2025-02-26T14:22:38.461+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-02-26T14:22:38.487+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-02-26T14:22:38.487+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=our_first_dag_v1, task_id=thrid_task, run_id=scheduled__2025-02-25T00:00:00+00:00, execution_date=20250225T000000, start_date=20250226T142238, end_date=20250226T142238
+[2025-02-26T14:22:38.510+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-26T14:22:38.511+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-26T14:22:38.511+0000] {logging_mixin.py:190} INFO - Dag name:our_first_dag_v1 queued_at:2025-02-26 14:22:36.381857+00:00
+[2025-02-26T14:22:38.511+0000] {logging_mixin.py:190} INFO - Task hostname:25887b48f6fb operator:BashOperator
+[2025-02-26T14:22:38.540+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-26T14:22:38.550+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-03-04T05:11:19.191+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-04T05:11:19.219+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: our_first_dag_v1.thrid_task scheduled__2025-02-25T00:00:00+00:00 [queued]>
+[2025-03-04T05:11:19.229+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: our_first_dag_v1.thrid_task scheduled__2025-02-25T00:00:00+00:00 [queued]>
+[2025-03-04T05:11:19.229+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 6
+[2025-03-04T05:11:19.259+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): thrid_task> on 2025-02-25 00:00:00+00:00
+[2025-03-04T05:11:19.271+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'our_first_dag_v1', 'thrid_task', 'scheduled__2025-02-25T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpyd5y__hv']
+[2025-03-04T05:11:19.273+0000] {standard_task_runner.py:105} INFO - Job 11: Subtask thrid_task
+[2025-03-04T05:11:19.273+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=234) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-04T05:11:19.274+0000] {standard_task_runner.py:72} INFO - Started process 243 to run task
+[2025-03-04T05:11:19.320+0000] {task_command.py:467} INFO - Running <TaskInstance: our_first_dag_v1.thrid_task scheduled__2025-02-25T00:00:00+00:00 [running]> on host e52f68431fc8
+[2025-03-04T05:11:19.399+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='our_first_dag_v1' AIRFLOW_CTX_TASK_ID='thrid_task' AIRFLOW_CTX_EXECUTION_DATE='2025-02-25T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-25T00:00:00+00:00'
+[2025-03-04T05:11:19.400+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-04T05:11:19.413+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-03-04T05:11:19.414+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'echo hey, I am task3 and will be running after task1 at the same time as task2!']
+[2025-03-04T05:11:19.430+0000] {subprocess.py:99} INFO - Output:
+[2025-03-04T05:11:19.433+0000] {subprocess.py:106} INFO - hey, I am task3 and will be running after task1 at the same time as task2!
+[2025-03-04T05:11:19.433+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-03-04T05:11:19.455+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-04T05:11:19.456+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=our_first_dag_v1, task_id=thrid_task, run_id=scheduled__2025-02-25T00:00:00+00:00, execution_date=20250225T000000, start_date=20250304T051119, end_date=20250304T051119
+[2025-03-04T05:11:19.528+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-04T05:11:19.536+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-03-07T10:44:07.749+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: our_first_dag_v1.thrid_task scheduled__2025-02-25T00:00:00+00:00 [queued]>
+[2025-03-07T10:44:07.761+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: our_first_dag_v1.thrid_task scheduled__2025-02-25T00:00:00+00:00 [queued]>
+[2025-03-07T10:44:07.761+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 6
+[2025-03-07T10:44:07.780+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): thrid_task> on 2025-02-25 00:00:00+00:00
+[2025-03-07T10:44:07.788+0000] {standard_task_runner.py:57} INFO - Started process 337 to run task
+[2025-03-07T10:44:07.791+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'our_first_dag_v1', 'thrid_task', 'scheduled__2025-02-25T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpwaufnic1']
+[2025-03-07T10:44:07.794+0000] {standard_task_runner.py:85} INFO - Job 16: Subtask thrid_task
+[2025-03-07T10:44:07.846+0000] {task_command.py:416} INFO - Running <TaskInstance: our_first_dag_v1.thrid_task scheduled__2025-02-25T00:00:00+00:00 [running]> on host 93934f8e361f
+[2025-03-07T10:44:07.919+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='our_first_dag_v1' AIRFLOW_CTX_TASK_ID='thrid_task' AIRFLOW_CTX_EXECUTION_DATE='2025-02-25T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-02-25T00:00:00+00:00'
+[2025-03-07T10:44:07.920+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-07T10:44:07.920+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo hey, I am task3 and will be running after task1 at the same time as task2!']
+[2025-03-07T10:44:07.931+0000] {subprocess.py:86} INFO - Output:
+[2025-03-07T10:44:07.933+0000] {subprocess.py:93} INFO - hey, I am task3 and will be running after task1 at the same time as task2!
+[2025-03-07T10:44:07.933+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-07T10:44:07.961+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=our_first_dag_v1, task_id=thrid_task, execution_date=20250225T000000, start_date=20250307T104407, end_date=20250307T104407
+[2025-03-07T10:44:08.003+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-07T10:44:08.129+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,30 @@
+[2025-02-26T14:20:27.993+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-26T14:20:28.031+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: our_first_dag.second_task scheduled__2021-10-17T00:00:00+00:00 [queued]>
+[2025-02-26T14:20:28.059+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: our_first_dag.second_task scheduled__2021-10-17T00:00:00+00:00 [queued]>
+[2025-02-26T14:20:28.060+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 6
+[2025-02-26T14:20:28.101+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): second_task> on 2021-10-17 00:00:00+00:00
+[2025-02-26T14:20:28.121+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=4429) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-02-26T14:20:28.123+0000] {standard_task_runner.py:72} INFO - Started process 4464 to run task
+[2025-02-26T14:20:28.124+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'our_first_dag', 'second_task', 'scheduled__2021-10-17T00:00:00+00:00', '--job-id', '254', '--raw', '--subdir', 'DAGS_FOLDER/first_dag.py', '--cfg-path', '/tmp/tmpypu46sr2']
+[2025-02-26T14:20:28.126+0000] {standard_task_runner.py:105} INFO - Job 254: Subtask second_task
+[2025-02-26T14:20:28.225+0000] {task_command.py:467} INFO - Running <TaskInstance: our_first_dag.second_task scheduled__2021-10-17T00:00:00+00:00 [running]> on host 25887b48f6fb
+[2025-02-26T14:20:28.395+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='our_first_dag' AIRFLOW_CTX_TASK_ID='second_task' AIRFLOW_CTX_EXECUTION_DATE='2021-10-17T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2021-10-17T00:00:00+00:00'
+[2025-02-26T14:20:28.397+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-26T14:20:28.398+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-26T14:20:28.399+0000] {logging_mixin.py:190} INFO - Current task name:second_task state:running start_date:2025-02-26 14:20:28.032417+00:00
+[2025-02-26T14:20:28.399+0000] {logging_mixin.py:190} INFO - Dag name:our_first_dag and current dag run status:running
+[2025-02-26T14:20:28.400+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-02-26T14:20:28.402+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-02-26T14:20:28.404+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'echo hey, I am task2 and will be running after task1!']
+[2025-02-26T14:20:28.432+0000] {subprocess.py:99} INFO - Output:
+[2025-02-26T14:20:28.436+0000] {subprocess.py:106} INFO - hey, I am task2 and will be running after task1!
+[2025-02-26T14:20:28.437+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-02-26T14:20:28.486+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-02-26T14:20:28.487+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=our_first_dag, task_id=second_task, run_id=scheduled__2021-10-17T00:00:00+00:00, execution_date=20211017T000000, start_date=20250226T142028, end_date=20250226T142028
+[2025-02-26T14:20:28.530+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-26T14:20:28.531+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-26T14:20:28.531+0000] {logging_mixin.py:190} INFO - Dag name:our_first_dag queued_at:2025-02-26 14:20:24.514129+00:00
+[2025-02-26T14:20:28.531+0000] {logging_mixin.py:190} INFO - Task hostname:25887b48f6fb operator:BashOperator
+[2025-02-26T14:20:28.587+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-26T14:20:28.615+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-26T14:20:28.619+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

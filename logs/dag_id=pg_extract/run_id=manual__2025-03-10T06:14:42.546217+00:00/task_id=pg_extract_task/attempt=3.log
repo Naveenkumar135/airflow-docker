@@ -1,0 +1,27 @@
+[2025-03-10T06:18:29.239+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pg_extract.pg_extract_task manual__2025-03-10T06:14:42.546217+00:00 [queued]>
+[2025-03-10T06:18:29.249+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pg_extract.pg_extract_task manual__2025-03-10T06:14:42.546217+00:00 [queued]>
+[2025-03-10T06:18:29.250+0000] {taskinstance.py:1361} INFO - Starting attempt 3 of 3
+[2025-03-10T06:18:29.264+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): pg_extract_task> on 2025-03-10 06:14:42.546217+00:00
+[2025-03-10T06:18:29.267+0000] {standard_task_runner.py:57} INFO - Started process 746 to run task
+[2025-03-10T06:18:29.270+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'pg_extract', 'pg_extract_task', 'manual__2025-03-10T06:14:42.546217+00:00', '--job-id', '559', '--raw', '--subdir', 'DAGS_FOLDER/pg_extract.py', '--cfg-path', '/tmp/tmpazqqp03i']
+[2025-03-10T06:18:29.272+0000] {standard_task_runner.py:85} INFO - Job 559: Subtask pg_extract_task
+[2025-03-10T06:18:29.315+0000] {task_command.py:416} INFO - Running <TaskInstance: pg_extract.pg_extract_task manual__2025-03-10T06:14:42.546217+00:00 [running]> on host ad30608371a0
+[2025-03-10T06:18:29.382+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pg_extract' AIRFLOW_CTX_TASK_ID='pg_extract_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-10T06:14:42.546217+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-10T06:14:42.546217+00:00'
+[2025-03-10T06:18:29.397+0000] {base.py:73} INFO - Using connection ID 'postgres_localhost' for task execution.
+[2025-03-10T06:18:29.400+0000] {pg_extract.py:15} INFO - Exporting query to file
+[2025-03-10T06:18:29.400+0000] {postgres.py:169} INFO - Running copy expert: COPY (SELECT * FROM dag_runs) TO STDOUT WITH CSV HEADER, filename: /home/naveen/***-docker/pg_extract.csv
+[2025-03-10T06:18:29.400+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/pg_extract.py", line 16, in pg_extract
+    pg_hook.copy_expert(copy_sql,filename="/home/naveen/airflow-docker/pg_extract.csv")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/postgres/hooks/postgres.py", line 171, in copy_expert
+    with open(filename, "w"):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/naveen/airflow-docker/pg_extract.csv'
+[2025-03-10T06:18:29.416+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=pg_extract, task_id=pg_extract_task, execution_date=20250310T061442, start_date=20250310T061829, end_date=20250310T061829
+[2025-03-10T06:18:29.434+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 559 for task pg_extract_task ([Errno 2] No such file or directory: '/home/naveen/airflow-docker/pg_extract.csv'; 746)
+[2025-03-10T06:18:29.442+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-03-10T06:18:29.469+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
